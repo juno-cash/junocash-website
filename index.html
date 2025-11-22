@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Juno Cash</title>
+    <meta name="description" content="All the good of Zcash without the trash. Private-by-default, Orchard-only, CPU-mined with RandomX." />
+    <meta property="og:title" content="Juno Cash" />
+    <meta property="og:description" content="All the good of Zcash without the trash. Private-by-default, Orchard-only, CPU-mined with RandomX." />
+    <meta property="og:type" content="website" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='80'>🪙</text></svg>">
+    <style>
+        :root{
+            --bg: #0b0d10; /* deep slate */
+            --panel: #12151a; /* card bg */
+            --text: #e6e8eb; /* base text */
+            --muted: #9aa3ad; /* subtle text */
+            --accent: #00c853; /* greentext */
+            --accent-2: #4CAF50; /* buttons */
+            --ring: rgba(0, 200, 83, 0.35);
+            --border: #1d232d;
+            --shadow: 0 10px 30px rgba(0,0,0,.45), 0 2px 8px rgba(0,0,0,.4);
+        }
+        @media (prefers-color-scheme: light){
+            :root{
+                --bg: #f6f7f9;
+                --panel: #ffffff;
+                --text: #0d1117;
+                --muted: #57606a;
+                --accent: #008f3d;
+                --accent-2: #2e7d32;
+                --ring: rgba(46, 125, 50, 0.25);
+                --border: #e6e8eb;
+            }
+        }
+        *{box-sizing:border-box;}
+        html,body{height:100%; overflow-x:hidden; width:100%;}
+        body{
+            margin:0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            color:var(--text); background:radial-gradient(1200px 800px at 50% -10%, rgba(0,200,83,0.06), transparent 60%), var(--bg);
+            display:grid; place-items:center; padding:16px;
+        }
+        .wrap{ width:100%; max-width:750px; box-sizing:border-box; }
+        header{ text-align:center; margin-bottom:clamp(16px, 3vw, 22px); }
+        .logo{ font-weight:800; letter-spacing:0.02em; font-size:clamp(28px, 4vw, 40px); }
+        .subtitle{ color:var(--muted); font-size:clamp(14px, 2vw, 16px); margin-top:6px; }
+
+        .card{
+            background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)), var(--panel);
+            border:1px solid var(--border); border-radius:18px; padding:20px 16px; box-shadow:var(--shadow);
+        }
+        .greentext{ line-height:1.55; font-size:15px; }
+        .greentext .g{ color:var(--accent); display:block; }
+        .greentext .g.last-in-group{ margin-bottom:1em; }
+
+        .actions{ display:flex; gap:12px; justify-content:center; margin-top:20px; flex-wrap:wrap; }
+        .btn{ appearance:none; border:1px solid var(--border); background:transparent; color:var(--text); padding:14px 20px; border-radius:12px; font-weight:700; text-decoration:none; transition:.2s ease; box-shadow:0 0 0 0 var(--ring); font-size:15px; min-height:44px; display:inline-flex; align-items:center; justify-content:center; }
+        .btn.primary{ background:var(--accent-2); border-color:transparent; color:white; }
+        .btn:hover{ transform:translateY(-1px); box-shadow:0 8px 20px rgba(0,0,0,.25), 0 0 0 6px var(--ring); }
+
+        footer{ text-align:center; color:var(--muted); font-size:clamp(11px, 2vw, 12.5px); margin-top:18px; word-wrap:break-word; }
+        code.tag{ background:rgba(255,255,255,.05); border:1px solid var(--border); padding:2px 6px; border-radius:6px; word-break:break-all; display:inline-block; max-width:100%; }
+
+        /* Mobile styles */
+        @media (max-width: 640px){
+            body{ padding:12px; }
+            .card{ padding:18px 14px; border-radius:12px; }
+            .greentext{ font-size:14px; line-height:1.6; }
+            .greentext .g.last-in-group{ margin-bottom:1.5em; }
+            .btn{ padding:12px 16px; font-size:14px; }
+            footer{ font-size:11px; }
+        }
+
+        /* Desktop styles */
+        @media (min-width: 641px){
+            body{ padding:24px; }
+            .card{ padding:32px 28px; }
+            .greentext{ font-size:15.5px; padding-left:100px; }
+            footer{ font-size:12.5px; }
+        }
+    </style>
+</head>
+<body>
+<main class="wrap" role="main">
+    <header>
+        <div class="logo" aria-label="Project name">Juno Cash</div>
+        <div class="subtitle">All the good of Zcash without the trash.</div>
+    </header>
+
+    <section class="card" aria-labelledby="pitch-title">
+        <h1 id="pitch-title" class="visually-hidden">Why Juno Cash</h1>
+        <div class="greentext" aria-label="Greentext pitch"><span class="g">&gt;be Juno Cash</span>
+<span class="g">&gt;all the good of Zcash</span>
+<span class="g last-in-group">&gt;none of the suck</span>
+<span class="g">&gt;no 20% founder tax</span>
+<span class="g">&gt;no cringe trusted setup (no Sapling, no Sprout)</span>
+<span class="g">&gt;no ASIC chads wrecking your CPU mining</span>
+<span class="g last-in-group">&gt;no half-transparent / half-shielded supply fud</span>
+<span class="g">&gt;100% shielded transaction pool</span>
+<span class="g">&gt;coinbase is visible for easy supply audit</span>
+<span class="g">&gt;then transferred irreversibly to shielded pool</span>
+<span class="g last-in-group">&gt;total privacy dream</span>
+<span class="g">&gt;slow start ramp to prevent early whales</span>
+<span class="g">&gt;RandomX for true CPU pleb mining</span>
+<span class="g">&gt;19 years emission to let fee market grow</span>
+<span class="g last-in-group">&gt;miners can toss a few crumbs to devs if they feel like it</span>
+<span class="g">&gt;privacy coin that doesn't bend the knee</span>
+<span class="g">&gt;no founders leeching</span>
+<span class="g">&gt;no setup ceremony cope</span>
+<span class="g">&gt;just pure, clean, private money</span></div>
+
+        <div class="actions" aria-label="Key links">
+            <a class="btn" href="/junocash.pdf" target="_blank" rel="noopener" aria-label="Open Whitepaper">Whitepaper</a>
+            <a class="btn primary" href="https://github.com/juno-cash/junocash/releases" target="_blank" rel="noopener" aria-label="Open GitHub">GitHub / Download</a>
+        </div>
+    </section>
+
+    <footer>
+        <span>GPG: <code class="tag">D36C4A48A49748EEB04F1C9CB39864EAA45AB93C</code></span>
+        <br>
+        <span>Github: <a href="https://github.com/juno-cash/junocash" target="_blank" rel="noopener" style="color: var(--accent);">https://github.com/juno-cash/junocash</a></span>
+        <br>
+        <span>X: <a href="https://x.com/JunoMoneta_on_X" target="_blank" rel="noopener" style="color: var(--accent);">@JunoCash_on_X</a></span>
+    </footer>
+</main>
+
+<style>
+    .visually-hidden{ position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px, 1px, 1px, 1px); white-space:nowrap; }
+</style>
+</body>
+</html>
